@@ -182,3 +182,126 @@
     border-right-color: var(--border);
   }
 }
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  max-width: none;
+  border: 0;
+  text-align: left;
+}
+
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  background: #f4f1e8;
+}
+
+.auth-intro {
+  padding: clamp(3rem, 8vw, 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f5f2e9;
+  background: linear-gradient(135deg, #193c3b, #275d53 60%, #b77a42);
+}
+
+.auth-intro h1 {
+  max-width: 680px;
+  margin: 1.4rem 0;
+  color: inherit;
+  font-size: clamp(2.8rem, 6vw, 6.2rem);
+  line-height: 0.98;
+}
+
+.auth-intro > p:last-child { max-width: 480px; font-size: 1.15rem; color: #d8e2d5; }
+.eyebrow, .card-label { margin: 0; color: #c58a4f; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.auth-panel { align-self: center; width: min(100% - 4rem, 420px); margin: 0 auto; }
+.auth-panel h2 { margin: 0.8rem 0 2rem; color: #193c3b; font-size: 2.4rem; line-height: 1.05; }
+form { display: grid; gap: 1rem; }
+label { display: grid; gap: 0.4rem; color: #193c3b; font-size: 0.85rem; font-weight: 700; }
+input { width: 100%; box-sizing: border-box; padding: 0.85rem 0.9rem; border: 1px solid #c8c9bc; border-radius: 3px; background: #fffdf8; color: #193c3b; font: inherit; }
+input:focus { outline: 2px solid #c58a4f; outline-offset: 2px; }
+.primary-button { margin-top: 0.5rem; padding: 0.95rem 1.2rem; border: 0; border-radius: 3px; background: #193c3b; color: #fffdf8; font: inherit; font-weight: 800; cursor: pointer; }
+.primary-button:disabled { cursor: wait; opacity: 0.65; }
+.form-error { margin: 0; color: #a23e35; font-size: 0.9rem; }
+.auth-switch { margin-top: 1.5rem; color: #66716b; font-size: 0.9rem; }
+a { color: #a96738; font-weight: 800; }
+.loading-screen { min-height: 100vh; display: grid; place-items: center; background: #f4f1e8; color: #193c3b; }
+.dashboard-shell { min-height: 100vh; padding: 1.5rem clamp(1.5rem, 6vw, 7rem); background: #f4f1e8; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 3rem; }
+.brand { color: #193c3b; font-size: 0.78rem; font-weight: 900; letter-spacing: 0.14em; }
+.text-button { border: 0; background: transparent; color: #a96738; font: inherit; font-weight: 800; cursor: pointer; }
+.dashboard-hero { padding: clamp(2rem, 7vw, 6rem) 0; border-top: 1px solid #d6d3c8; }
+.dashboard-hero h1 { margin: 1rem 0; color: #193c3b; font-size: clamp(3rem, 7vw, 7rem); line-height: 0.95; }
+.dashboard-hero > p:last-child { color: #66716b; font-size: 1.15rem; }
+.profile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.profile-grid article { min-height: 150px; padding: 1.5rem; background: #fffdf8; border-top: 4px solid #c58a4f; }
+.profile-grid strong { display: block; margin: 1rem 0 0.5rem; color: #193c3b; font-size: 1.4rem; }
+.profile-grid p { color: #66716b; font-size: 0.9rem; }
+.dashboard-course-section { padding: 5rem 0 2rem; }
+.journey-card { padding: clamp(1.5rem, 4vw, 3rem); background: #193c3b; color: #f5f2e9; }
+.section-heading, .dashboard-section-heading, .progress-meta, .current-session-row, .session-detail-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.journey-card h2, .dashboard-section-heading h2 { margin: 0.7rem 0 0; color: inherit; font-size: clamp(1.7rem, 3vw, 2.8rem); }
+.journey-description { max-width: 700px; margin: 1.2rem 0 1.8rem; color: #d8e2d5; }
+.progress-number { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 4vw, 3.4rem); font-weight: 700; }
+.progress-track { height: 0.65rem; overflow: hidden; background: #496963; }
+.progress-track span { display: block; height: 100%; background: #d49a5c; transition: width 0.4s ease; }
+.progress-meta { margin: 0.7rem 0 2rem; color: #d8e2d5; font-size: 0.85rem; }
+.progress-meta strong { color: #fffdf8; }
+.current-session-row { padding-top: 1.5rem; border-top: 1px solid #496963; }
+.current-session-row strong { display: block; margin-top: 0.35rem; color: #fffdf8; }
+.small-button { white-space: nowrap; }
+.secondary-button { display: inline-block; margin-top: 1.2rem; padding: 0.75rem 1rem; border: 1px solid #c58a4f; color: #c58a4f; font-size: 0.85rem; text-decoration: none; }
+.dashboard-section-heading { margin: 3rem 0 1.2rem; }
+.dashboard-section-heading h2 { color: #193c3b; }
+.session-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+.session-list-dashboard { grid-template-columns: repeat(3, 1fr); }
+.session-card { position: relative; display: flex; align-items: flex-start; gap: 0.85rem; min-height: 125px; padding: 1.1rem; border: 1px solid #d6d3c8; background: #fffdf8; color: #193c3b; text-decoration: none; }
+.session-card:hover { border-color: #c58a4f; }
+.session-card-locked { cursor: not-allowed; opacity: 0.62; }
+.session-card small { position: absolute; right: 1rem; bottom: 0.8rem; color: #66716b; font-size: 0.7rem; }
+.session-icon { display: grid; flex: 0 0 2rem; width: 2rem; height: 2rem; place-items: center; border-radius: 50%; background: #e7eee3; color: #275d53; font-weight: 800; }
+.session-icon.status-locked { background: #e9e7df; color: #7c8179; }
+.session-icon.status-completed { background: #d49a5c; color: #193c3b; }
+.session-kicker { display: block; margin-bottom: 0.35rem; color: #a96738; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.session-card strong { display: block; line-height: 1.2; }
+.session-status { display: block; margin-top: 0.7rem; color: #66716b; font-size: 0.78rem; }
+.page-shell { min-height: 100vh; padding: 2rem clamp(1.5rem, 7vw, 8rem) 5rem; background: #f4f1e8; }
+.page-header { max-width: 800px; padding: 4rem 0 2.5rem; border-bottom: 1px solid #d6d3c8; }
+.page-header h1, .session-detail h1 { margin: 0.8rem 0; color: #193c3b; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 0.95; }
+.page-header > p:last-child, .session-lead { color: #66716b; font-size: 1.1rem; }
+.course-progress-strip { max-width: 800px; padding: 1.5rem 0 2rem; }
+.course-progress-strip strong, .course-progress-strip span { display: block; margin-bottom: 0.7rem; }
+.course-progress-strip > span { color: #a96738; font-size: 0.85rem; }
+.back-link { display: inline-block; margin-bottom: 2rem; color: #a96738; }
+.session-detail { max-width: 850px; padding: 2rem 0; }
+.status-badge { padding: 0.4rem 0.7rem; background: #e7eee3; color: #275d53; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; }
+.status-badge.status-locked { background: #e9e7df; color: #7c8179; }
+.session-facts { display: flex; gap: 3rem; margin: 2rem 0; padding: 1rem 0; border-block: 1px solid #d6d3c8; color: #66716b; font-size: 0.8rem; }
+.session-facts strong { display: block; margin-top: 0.3rem; color: #193c3b; font-size: 1rem; }
+.session-content { max-width: 650px; padding: 1rem 0; }
+.session-content h2 { color: #193c3b; }
+.locked-message, .success-message { margin-top: 2rem; padding: 1rem; background: #e9e7df; color: #66716b; }
+.success-message { background: #dfece0; color: #275d53; }
+.attestation-flow { margin-top: 2rem; padding: 1.5rem; background: #fffdf8; border-left: 4px solid #c58a4f; }
+.resource-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding-top: 2rem; }
+.resource-card { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1.5rem; background: #fffdf8; border-top: 4px solid #c58a4f; }
+.resource-card h3 { margin: 0.4rem 0; color: #193c3b; }
+.resource-card p { color: #66716b; font-size: 0.9rem; }
+.resource-card .secondary-button { grid-column: 2; justify-self: start; }
+.resource-card-locked { border-top-color: #b7b6aa; }
+.resource-icon { font-size: 1.6rem; }
+.resource-status { color: #a96738; font-size: 0.78rem; font-weight: 800; }
+
+@media (max-width: 760px) {
+  .auth-shell { display: block; }
+  .auth-intro { min-height: 38vh; padding: 3rem 1.5rem; }
+  .auth-intro h1 { font-size: 3.2rem; }
+  .auth-panel { width: auto; padding: 3rem 1.5rem; }
+  .profile-grid { grid-template-columns: 1fr; }
+  .session-list, .session-list-dashboard, .resource-list { grid-template-columns: 1fr; }
+  .current-session-row { align-items: flex-start; flex-direction: column; }
+  .dashboard-course-section { padding-top: 3rem; }
+}
